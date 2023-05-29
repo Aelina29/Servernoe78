@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Univercities";
+}
+
+<form method="post" asp-action="CreateUniversity">
+    <div>
+        <p>Добавить Университет</p>
+        <label>University Name</label>
+        <input type="text" name="UniversityName" />
+    </div>
+    <div>
+        <label>Country Name</label>
+        <input type="text" name="CountryName" />
+    </div>
+    <button type="submit">Добавить</button>
+</form>
+<br />
+
+<form method="post" asp-action="DeleteUniversity">
+    <div>
+        <p>Удалить Университет</p>
+        <label>University Name</label>
+        <input type="text" name="UniversityName" />
+    </div>
+    <button type="submit">Удалить</button>
+</form>
+
+
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>University Name</th>
+            <th>University Id</th>
+            <th>Country Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ranking in Model)
+        {
+            <tr>
+                <td>@(Model.IndexOf(ranking) + 1)</td>
+                <td>@ranking.UniversityName</td>
+                <td>@ranking.Id</td>
+                <td>@ranking.Country.CountryName</td>
+            </tr>
+        }
+    </tbody>
+</table>

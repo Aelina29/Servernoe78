@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "UniversityRankingYears";
+}
+
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>UniversityId</th>
+            <th>RankingCriteriaId</th>
+            <th>Year</th>
+            <th>Score</th>
+            <th>University.UniversityName</th>
+            <th>RankingCriteria.CriteriaName</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ranking in Model)
+        {
+            <tr>
+                <td>@(Model.IndexOf(ranking) + 1)</td>
+                <td>@ranking.UniversityId</td>
+                <td>@ranking.RankingCriteriaId</td>
+                <td>@ranking.Year</td>
+                <td>@ranking.Score</td>
+                <td>@ranking.University.UniversityName </td>
+                <td>@ranking.RankingCriteria.CriteriaName </td>
+            </tr>
+        }
+    </tbody>
+</table>qsq
+
+
+
+
+<li class="nav-item">
+    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="UniversityRankingYears">UniversityRankingYears</a>
+</li>

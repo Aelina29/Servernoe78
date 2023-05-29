@@ -1,0 +1,25 @@
+﻿    @{
+    ViewData["Title"] = "RankingCriteria";
+}
+
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>RankingCriteria Name</th>
+            <th>RankingCriteria Id</th>
+            <th>RankingSystems Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ranking in Model)
+        {
+            <tr>
+                <td>@(Model.IndexOf(ranking) + 1)</td>
+                <td>@ranking.CriteriaName</td>
+                <td>@ranking.Id</td>
+                <td>@ranking.RankingSystem.SystemName   </td>
+            </tr>
+        }
+    </tbody>
+</table>

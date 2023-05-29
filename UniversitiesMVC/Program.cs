@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -12,6 +13,20 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<UniversitiesContext>(options =>
                 options.UseNpgsql(builder.Configuration.GetConnectionString("Context")));
 
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+})
+.AddCookie(options =>
+{
+    options.LoginPath = "/Account/Login";
+    options.AccessDeniedPath = "/Account/AccessDenied";
+});
+
+builder.Services.AddControllersWithViews();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -22,12 +37,17 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+
+app.UseDefaultFiles();
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
+
 
 app.MapControllerRoute(
     name: "default",

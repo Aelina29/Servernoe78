@@ -1,5 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
 using System.Diagnostics;
 using UniversitiesMVC.Models;
 
@@ -35,9 +38,12 @@ namespace UniversitiesMVC.Controllers
         }
 
         [HttpPost]
+        [Authorize(AuthenticationSchemes = CookieAuthenticationDefaults.AuthenticationScheme, Roles = "admin")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> CreateUniversity(string UniversityName, string? CountryName)
-        {        
+        {
+
+            //(User.IsInRole("admin)")
             if (ModelState.IsValid)
             {
                 var univers = _db.Universities.ToList();
@@ -74,9 +80,11 @@ namespace UniversitiesMVC.Controllers
         }
 
         [HttpPost]
+        [Authorize(AuthenticationSchemes = CookieAuthenticationDefaults.AuthenticationScheme, Roles = "admin")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteUniversity(string? UniversityName)
         {
+
             if (ModelState.IsValid)
             {
                 var univers = _db.Universities.ToList();   
@@ -86,7 +94,8 @@ namespace UniversitiesMVC.Controllers
                     _db.Universities.Remove(univer);
                     _db.SaveChanges();
                 }
-                return RedirectToAction(nameof(Index));
+                //return RedirectToAction(nameof(Index));
+                return Ok("Univertsity Deleted");
             }
             return View();
         }
@@ -131,6 +140,7 @@ namespace UniversitiesMVC.Controllers
         }
 
         [HttpPost]
+        [Authorize(AuthenticationSchemes = CookieAuthenticationDefaults.AuthenticationScheme, Roles = "admin")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> CreateCountry(string? CountryName)
         {
@@ -148,6 +158,7 @@ namespace UniversitiesMVC.Controllers
         }
 
         [HttpPost]
+        [Authorize(AuthenticationSchemes = CookieAuthenticationDefaults.AuthenticationScheme, Roles = "admin")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteCountry(string? CountryName)
         {

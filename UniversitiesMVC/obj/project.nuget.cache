@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wEybQefJP5X0nvcr8yg+3s3hFV1DCBYyO2T+TvnwQORuSzgYeJ3YjFcZ0MwpHiE3rziejAwPhYMXxSV0ZBsMEg==",
+  "dgSpecHash": "Llgyg6Q4ltxlNt3VXAxd4s43FltBlGpk2X0Z0UBxfwgaj8l0USfqjIi0cqyAc74UkGIrktLHSRoDjenEGpSZmg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Аэлина\\Downloads\\UniversitiesMVC_7\\UniversitiesMVC\\UniversitiesMVC.csproj",
+  "projectFilePath": "C:\\Users\\Аэлина\\Desktop\\Серверное\\UniversitiesMVC_78\\UniversitiesMVC\\UniversitiesMVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Аэлина\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Аэлина\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

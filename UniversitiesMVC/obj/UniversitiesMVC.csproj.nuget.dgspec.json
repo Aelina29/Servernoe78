@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Аэлина\\Downloads\\UniversitiesMVC_7\\UniversitiesMVC\\UniversitiesMVC.csproj": {}
+    "C:\\Users\\Аэлина\\Desktop\\Серверное\\UniversitiesMVC_78\\UniversitiesMVC\\UniversitiesMVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Аэлина\\Downloads\\UniversitiesMVC_7\\UniversitiesMVC\\UniversitiesMVC.csproj": {
+    "C:\\Users\\Аэлина\\Desktop\\Серверное\\UniversitiesMVC_78\\UniversitiesMVC\\UniversitiesMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Аэлина\\Downloads\\UniversitiesMVC_7\\UniversitiesMVC\\UniversitiesMVC.csproj",
+        "projectUniqueName": "C:\\Users\\Аэлина\\Desktop\\Серверное\\UniversitiesMVC_78\\UniversitiesMVC\\UniversitiesMVC.csproj",
         "projectName": "UniversitiesMVC",
-        "projectPath": "C:\\Users\\Аэлина\\Downloads\\UniversitiesMVC_7\\UniversitiesMVC\\UniversitiesMVC.csproj",
+        "projectPath": "C:\\Users\\Аэлина\\Desktop\\Серверное\\UniversitiesMVC_78\\UniversitiesMVC\\UniversitiesMVC.csproj",
         "packagesPath": "C:\\Users\\Аэлина\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Аэлина\\Downloads\\UniversitiesMVC_7\\UniversitiesMVC\\obj\\",
+        "outputPath": "C:\\Users\\Аэлина\\Desktop\\Серверное\\UniversitiesMVC_78\\UniversitiesMVC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -70,7 +70,7 @@
     @if (User.Identity.IsAuthenticated)
     {
         <div class="user-info" style="text-align: right;">
-            <button id="logout">Разлогиниться</button>
+            <button id="logout">Выйти</button>
         </div>
         <script>
             async function logoutAsync() {
@@ -97,12 +97,11 @@
     {
         <div style="text-align: center;">
             <div id="loginForm">
-                <h3>Вход на сайт</h3>
-                <label>Введите email</label><br />
+                <label>email</label><br />
                 <input type="email" id="emailLogin" /> <br /><br />
-                <label>Введите пароль</label><br />
+                <label>пароль</label><br />
                 <input type="password" id="passwordLogin" /><br /><br />
-                <input type="submit" id="submitLogin" value="Логин" />
+                <input type="submit" id="submitLogin" value="Войти" />
             </div>
         </div>
         <script>
